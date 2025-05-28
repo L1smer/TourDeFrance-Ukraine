@@ -8,7 +8,7 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ id, title, children }) => {
   return (
-    <section id={id} style={{ padding: "100px 20px", minHeight: "100vh" }}>
+    <section id={id} className="min-h-screen pt-50">
       <h2>{title}</h2>
       {children}
     </section>
