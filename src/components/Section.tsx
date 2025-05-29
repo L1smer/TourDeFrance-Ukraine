@@ -2,14 +2,12 @@ import React from "react";
 
 interface SectionProps {
   id: string;
-  title: string;
   children?: React.ReactNode;
 }
 
-const Section: React.FC<SectionProps> = ({ id, title, children }) => {
+const Section: React.FC<SectionProps> = ({ id, children }) => {
   return (
-    <section id={id} className="min-h-screen pt-50">
-      <h2>{title}</h2>
+    <section id={id} className="min-h-screen pt-30">
       {children}
     </section>
   );
