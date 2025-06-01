@@ -4,11 +4,11 @@ const scrollTo = (id: string) => {
 
 export default function Header() {
   return (
-    <header className="bg-white min-h-25 text-white p-4 flex justify-between items-center fixed w-full z-50 shadow">
+    <header className="bg-white min-h-25 text-white p-4 flex justify-between items-center fixed w-full z-3 shadow">
       <div>
-        <img src="../../public/logo1.png" alt="" className='max-w-35'/>
+        <img src="../../public/logo1.png" alt="" className='max-h-20'/>
       </div>
-      <nav className="space-x-20 mr-20">
+      <nav className="space-x-10 mr-20">
         <button onClick={() => scrollTo("about")} className="text-black">About</button>
         <button onClick={() => scrollTo("route")} className="text-black">Route</button>
         <button onClick={() => scrollTo("gallery")} className="text-black">Gallery</button>
