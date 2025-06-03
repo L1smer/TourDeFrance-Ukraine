@@ -6,11 +6,21 @@ interface LearnMoreAboutProps {
 
 export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
   return (
-    <div className="z-2 relative flex flex-col text-center gap-2 justify-between px-6 py-15 max-w-[1560px] mx-auto items-center">
+    <div className="z-2 relative flex text-center justify-around py-14 max-w-[1560px] mx-auto items-center">
+      <motion.img
+        src="./public/united24.png"
+        alt="Tour de France UA"
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="w-50 self-start mt-5"
+      />
+      
       <motion.div
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
+        className="max-w-[650px]"
       >
         <h2 className="text-4xl font-bold text-white mb-6">
           Tour de France by UA 25
@@ -21,9 +31,7 @@ export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
           France за день до офіційних етапів. Ініціатива має
           на меті привернути увагу до України, об’єднати українську та
           міжнародну велоспільноту та зібрати кошти для допомоги постраждалим
-          через платформу UNITED24. Учасники забезпечені супроводжувальним
-          автомобілем, який надає технічну підтримку, воду та харчування, а
-          також допомогу під час переїздів між етапами.
+          через платформу UNITED24.
         </p>
         <p className="text-xl leading-relaxed text-white/90">
           Це не просто спортивна подія — це акт підтримки, солідарності та
@@ -32,12 +40,12 @@ export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
       </motion.div>
 
       <motion.img
-        src="/learnMoreAbout_img.jpg"
+        src="./public/logo.png"
         alt="Tour de France UA"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="rounded-xl shadow-2xl w-full max-w-4xl max-h-[400px] object-cover mt-10"
+        className="w-50 self-end"
       />
 
       <button
