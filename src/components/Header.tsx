@@ -7,7 +7,7 @@ const scrollTo = (id: string) => {
 };
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState<string>("about ");
+  const [activeSection, setActiveSection] = useState<string>("about");
 
   useEffect(() => {
     const sections = ["about", "route", "gallery", "support", "contact"];
@@ -36,14 +36,15 @@ export default function Header() {
   const linkClass = (id: string) =>
     `transition ${
       activeSection === id ? "text-yellow-500 font-bold" : "text-black"
-    } hover:text-yellow-500`;
+    } hover:text-yellow-500 cursor-pointer`;
 
   return (
-    <header className="bg-white min-h-25 text-white p-4 flex justify-between items-center fixed w-full z-3 shadow">
-      <div>
-        <img src="../../public/logo1.png" alt="" className="max-h-20" />
+    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-md text-white px-6 py-3 flex items-center justify-between rounded-full max-w-[960px] w-full z-50 shadow-lg">
+      <div className="text-white font-bold text-lg italic">
+        Tour de France <span className="text-yellow-400">by UA 25</span>
       </div>
-      <nav className="space-x-10 mr-20">
+
+      <nav className="flex items-center space-x-8">
         <button
           onClick={() => scrollTo("about")}
           className={linkClass("about")}
@@ -73,6 +74,10 @@ export default function Header() {
           className={linkClass("contact")}
         >
           Contact
+        </button>
+
+        <button className="ml-4 px-4 py-2 bg-white text-black font-medium rounded-full shadow hover:bg-gray-200 transition cursor-pointer">
+          Donate
         </button>
       </nav>
     </header>
