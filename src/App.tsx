@@ -1,6 +1,7 @@
 import Section from "./components/Section";
 import Header from "./components/Header";
 import About from "./sections/About"
+import Route from "./sections/Route";
 
 export default function App() {
   return (
@@ -10,7 +11,7 @@ export default function App() {
         <About/>
       </Section>
       <Section id="route">
-        <p>Route details here...</p>
+        <Route/>
       </Section>
       <Section id="gallery">
         <p>Gallery content here...</p>

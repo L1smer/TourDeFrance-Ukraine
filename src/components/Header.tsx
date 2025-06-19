@@ -35,7 +35,7 @@ export default function Header() {
 
   const linkClass = (id: string) =>
     `transition ${
-      activeSection === id ? "text-yellow-500 font-bold" : "text-black"
+      activeSection === id ? "text-yellow-500 font-bold" : "text-white"
     } hover:text-yellow-500 cursor-pointer`;
 
   return (

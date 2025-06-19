@@ -45,7 +45,7 @@ export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="w-70 self-end"
+        className="w-70 self-end "
       />
 
       <button
