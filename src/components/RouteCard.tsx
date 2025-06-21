@@ -20,6 +20,11 @@ function isRestDay(route: any): route is RouteCardRestStageProps {
 }
 
 export default function RouteCard({ route }: RouteCardProps) {
+  function isToday(date: string) {
+    const today: string = new Date().toISOString().split("T")[0];
+    return date === today;
+  }
+
   if (isRestDay(route)) {
     return (
       <div className="rounded-2xl shadow-md border border-yellow-200 bg-yellow-50 p-5 text-center">
@@ -36,8 +41,15 @@ export default function RouteCard({ route }: RouteCardProps) {
     <div className="rounded-2xl shadow-md border border-blue-100 bg-blue-50 p-5">
       <h3 className="text-xl font-bold text-blue-800 mb-2">
         Stage {route.stage}
+        {isToday(route.date) && (
+          <span className="ml-2 px-2 py-1 text-xs rounded-full bg-green-100 text-green-800 font-semibold">
+            📍 Сьогодні
+          </span>
+        )}
       </h3>
-      <p className="text-sm text-blue-600">{route.date}</p>
+      <p className="text-sm text-blue-600">
+        {route.date} {}
+      </p>
       <p className="text-md mt-2 font-medium">
         {route.start} → {route.finish}
       </p>

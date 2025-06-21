@@ -35,15 +35,14 @@ export default function Header() {
 
   const linkClass = (id: string) =>
     `transition ${
-      activeSection === id ? "text-yellow-500 font-bold" : "text-white"
+      activeSection === id ? "text-yellow-500 font-bold" : activeSection === "route" ? "text-black" : "text-white"
     } hover:text-yellow-500 cursor-pointer`;
 
   return (
     <header className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-md text-white px-6 py-3 flex items-center justify-between rounded-full max-w-[960px] w-full z-50 shadow-lg">
-      <div className="text-white font-bold text-lg italic">
+      <div className={`${activeSection === "route" ? "text-sky-600" : "text-white"} font-bold text-lg italic`}>
         Tour de France <span className="text-yellow-400">by UA 25</span>
       </div>
-
       <nav className="flex items-center space-x-8">
         <button
           onClick={() => scrollTo("about")}
@@ -75,7 +74,6 @@ export default function Header() {
         >
           Contact
         </button>
-
         <button className="ml-4 px-4 py-2 bg-white text-black font-medium rounded-full shadow hover:bg-gray-200 transition cursor-pointer">
           Donate
         </button>
