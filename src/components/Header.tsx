@@ -10,7 +10,7 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState<string>("about");
 
   useEffect(() => {
-    const sections = ["about", "route", "gallery", "support", "contact"];
+    const sections = ["about", "route", "gallery", "support"];
 
     const handleScroll = () => {
       const scrollPos = window.scrollY + 100;
@@ -67,12 +67,6 @@ export default function Header() {
           className={linkClass("support")}
         >
           Support
-        </button>
-        <button
-          onClick={() => scrollTo("contact")}
-          className={linkClass("contact")}
-        >
-          Contact
         </button>
         <button className="ml-4 px-4 py-2 bg-white text-black font-medium rounded-full shadow hover:bg-gray-200 transition cursor-pointer">
           Donate

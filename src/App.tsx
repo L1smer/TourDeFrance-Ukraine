@@ -2,6 +2,7 @@ import Section from "./components/Section";
 import Header from "./components/Header";
 import About from "./sections/About"
 import Route from "./sections/Route";
+import Gallery from "./sections/Gallery";
 
 export default function App() {
   return (
@@ -14,13 +15,10 @@ export default function App() {
         <Route/>
       </Section>
       <Section id="gallery">
-        <p>Gallery content here...</p>
+        <Gallery/>
       </Section>
       <Section id="support">
         <p>Support & donation options...</p>
-      </Section>
-      <Section id="contact">
-        <p>Contact information...</p>
       </Section>
     </>
   );
