@@ -6,14 +6,14 @@ interface LearnMoreAboutProps {
 
 export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
   return (
-    <div className="relative z-2 flex items-center justify-center gap-8 px-6 py-12 max-w-[1560px] min-h-[100vh] mx-auto text-center">
+    <div className="relative z-2 flex flex-col xl:flex-row items-center justify-center gap-8 px-6 py-12 max-w-[1560px] min-h-[100vh] mx-auto text-center">
       <motion.img
         src="./public/united24.png"
         alt="Tour de France UA"
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="w-70 self-start mt-20"
+        className="w-70 self-center xl:self-start mt-20"
       />
       
       <motion.div
@@ -33,7 +33,7 @@ export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
           міжнародну велоспільноту та зібрати кошти для допомоги постраждалим
           через платформу UNITED24.
         </p>
-        <p className="text-2xl leading-relaxed text-white/90">
+        <p className="text-2xl leading-relaxed font-bold text-white/90">
           Це не просто спортивна подія — це акт підтримки, солідарності та
           незламності.
         </p>
@@ -45,7 +45,7 @@ export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="w-70 self-end "
+        className="w-70 self-center xl:self-end "
       />
 
       <button
