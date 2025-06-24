@@ -6,7 +6,7 @@ export default function Gallery() {
   return (
     <section
       className={`relative w-full ${
-        isViewMode ? "bg-gradient-to-b from-yellow-400 to-blue-600 min-h-700 xl:min-h-screen" : "min-h-270 xl:min-h-screen"
+        isViewMode ? "bg-gradient-to-b from-yellow-400 to-blue-600 min-h-700 xl:min-h-screen" : "2xl:min-h-screen min-h-385"
       } bg-black text-white`}
     >
       {/* Стартовий екран з історією */}
@@ -18,10 +18,10 @@ export default function Gallery() {
         <img
           src="./sergiy-photos/tourdefrancepr.jpg"
           alt="Мій маршрут Tour de France"
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover object-[70%_center] opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/100 lg:via-black/90 to-transparent" />
-        <div className="absolute inset-0 flex flex-col gap-10 2xl:flex-row-reverse justify-between items-center px-6 md:px-10 lg:px-16 py-8 overflow-y-auto">
+        <div className="absolute inset-0 bg-gradient-to-r md:via-black/70 from-black lg:via-black/90 to-transparent" />
+        <div className="absolute inset-0 flex flex-col gap-10 2xl:flex-row-reverse justify-center 2xl:justify-between items-center px-6 md:px-10 lg:px-16 overflow-y-auto">
           <h1 className="text-3xl m-10 md:text-4xl lg:text-5xl font-bold mb-8 lg:mb-0 text-center lg:text-left">
             Мене звати Сергій Краснов
           </h1>

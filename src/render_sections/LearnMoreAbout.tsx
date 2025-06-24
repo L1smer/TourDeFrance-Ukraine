@@ -8,7 +8,7 @@ export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
   return (
     <div className="relative z-2 flex flex-col xl:flex-row items-center justify-center gap-8 px-6 py-12 max-w-[1560px] min-h-[100vh] mx-auto text-center">
       <motion.img
-        src="./public/united24.png"
+        src="./united24.png"
         alt="Tour de France UA"
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
@@ -40,7 +40,7 @@ export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
       </motion.div>
 
       <motion.img
-        src="./public/logo.png"
+        src="./logo.png"
         alt="Tour de France UA"
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
