@@ -15,25 +15,24 @@ export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-70 self-center xl:self-start mt-20"
       />
-      
+
       <motion.div
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-[1000px]"
       >
-        <h2 className="text-7xl font-bold text-white drop-shadow-md mb-6">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-md mb-6">
           Tour de France by UA 25
         </h2>
-        <p className="text-2xl leading-relaxed text-white/90 mb-4">
+        <p className="text-lg lg:text-2xl leading-relaxed text-white/90 mb-4">
           З 4 по 26 липня 2025 року українська команда здійснить унікальний
           веломарафон — повне проходження маршруту легендарної гонки Tour de
-          France за день до офіційних етапів. Ініціатива має
-          на меті привернути увагу до України, об’єднати українську та
-          міжнародну велоспільноту та зібрати кошти для допомоги постраждалим
-          через платформу UNITED24.
+          France за день до офіційних етапів. Ініціатива має на меті привернути
+          увагу до України, об’єднати українську та міжнародну велоспільноту та
+          зібрати кошти на гуманітарне розмінування через платформу UNITED24.
         </p>
-        <p className="text-2xl leading-relaxed font-bold text-white/90">
+        <p className="text-lg lg:text-2xl leading-relaxed font-bold text-white/90">
           Це не просто спортивна подія — це акт підтримки, солідарності та
           незламності.
         </p>

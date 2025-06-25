@@ -8,10 +8,9 @@ export default function Gallery() {
       className={`relative w-full ${
         isViewMode
           ? "bg-gradient-to-b from-yellow-400 to-blue-600 min-h-700 xl:min-h-screen"
-          : "2xl:min-h-screen min-h-385"
+          : "2xl:min-h-screen min-h-470"
       } bg-black text-white`}
     >
-      {/* Стартовий екран з історією */}
       <div
         className={`absolute inset-0 z-20 transition-opacity duration-1000 ease-in-out ${
           isViewMode ? "opacity-0 pointer-events-none" : "opacity-100"
@@ -20,11 +19,11 @@ export default function Gallery() {
         <img
           src="./sergiy-photos/tourdefrancepr.jpg"
           alt="Мій маршрут Tour de France"
-          className="w-full h-full object-cover object-[70%_center] opacity-60"
+          className="w-full h-full object-cover object-[70%_center] opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-r md:via-black/70 from-black lg:via-black/90 to-transparent" />
         <div className="absolute inset-0 flex flex-col gap-10 2xl:flex-row-reverse justify-center 2xl:justify-between items-center px-6 md:px-10 lg:px-16 overflow-y-auto">
-          <h1 className="text-3xl m-10 md:text-4xl lg:text-5xl font-bold mb-8 lg:mb-0 text-center lg:text-left">
+          <h1 className="m-5 text-3xl md:text-4xl lg:text-5xl font-bold lg:mb-0 self-center 2xl:self-start text-center lg:text-left">
             Мене звати Сергій Краснов
           </h1>
           <div className="max-w-4xl text-base md:text-lg lg:text-xl font-semibold space-y-6 bg-black/40 p-4 md:p-6 rounded-xl">
@@ -69,7 +68,6 @@ export default function Gallery() {
               зібрати кошти на гуманітарне розмінування деокупованих територій..
             </p>
 
-            {/* остальной текст как есть */}
             <div className="pt-4 text-center lg:text-left">
               <button
                 onClick={() => setIsViewMode(true)}
@@ -82,7 +80,6 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* Галерея */}
       <div
         className={`absolute inset-0 transition-opacity duration-1000 ease-in-out w-full h-full ${
           isViewMode ? "opacity-100" : "opacity-0 pointer-events-none"
