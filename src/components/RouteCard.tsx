@@ -48,7 +48,7 @@ export default function RouteCard({ route }: RouteCardProps) {
         )}
       </h3>
       <p className="text-sm text-blue-600">
-        {route.date} {}
+        {route.date}
       </p>
       <p className="text-md mt-2 font-medium">
         {route.start} → {route.finish}

@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import About from "./sections/About"
 import Route from "./sections/Route";
 import Gallery from "./sections/Gallery";
+import Support from "./sections/Support";
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
         <Gallery/>
       </Section>
       <Section id="support">
-        <p>Support & donation options...</p>
+        <Support/>
       </Section>
     </>
   );
