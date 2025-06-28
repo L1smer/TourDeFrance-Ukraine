@@ -18,7 +18,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    const sections = ["about", "route", "gallery", "support"];
+    const sections = ["about", "route", "gallery", "support", "blog"];
 
     const handleScroll = () => {
       const scrollPos = window.scrollY + 100;
@@ -45,7 +45,7 @@ export default function Header() {
     `transition ${
       activeSection === id
         ? "text-yellow-500 font-bold"
-        : activeSection === "route"
+        : (activeSection === "route" || activeSection === "blog")
         ? "text-black"
         : "text-white"
     } hover:text-yellow-500 cursor-pointer`;
@@ -55,42 +55,48 @@ export default function Header() {
       <nav className="flex items-center justify-between flex-wrap">
         <div
           className={`${
-            activeSection === "route" ? "text-sky-600" : "text-white"
+            (activeSection === "route" || activeSection === "blog") ? "text-sky-600" : "text-white"
           } font-bold text-md sm:text-lg italic`}
         >
           Tour de France <span className="text-yellow-400">by UA 25</span>
         </div>
 
-        <div className="md:flex items-center space-x-8 hidden">
+        <div className="lg:flex items-center space-x-8 hidden">
           <button
             onClick={() => scrollTo("about")}
             className={linkClass("about")}
           >
-            About
+            Про нас
           </button>
           <button
             onClick={() => scrollTo("route")}
             className={linkClass("route")}
           >
-            Route
+            Маршрут
           </button>
           <button
             onClick={() => scrollTo("gallery")}
             className={linkClass("gallery")}
           >
-            Gallery
+            Історія
           </button>
           <button
             onClick={() => scrollTo("support")}
             className={linkClass("support")}
           >
-            Support
+            Збір
+          </button>
+					<button
+            onClick={() => scrollTo("blog")}
+            className={linkClass("blog")}
+          >
+            Блог
           </button>
           <button className="ml-4 px-4 py-2 bg-white text-black font-medium rounded-full shadow hover:bg-gray-200 transition cursor-pointer">
-            Donate
+            Задонатити
           </button>
         </div>
-        <div className="flex w-[75px] justify-end md:hidden">
+        <div className="flex w-[75px] justify-end lg:hidden">
           <button onClick={() => setIsOpen((prev) => !prev)}>
             {isOpen ? <X color="black" /> : <Menu color="black" />}
           </button>
@@ -103,7 +109,7 @@ export default function Header() {
               variants={mobileNavContainerVariant}
               initial="hidden"
               animate="show"
-              className="mt-4 flex flex-col gap-3 basis-full items-center md:hidden"
+              className="mt-4 flex flex-col gap-3 basis-full items-center lg:hidden"
             >
               <motion.div
                 variants={mobileNavListVariant}
@@ -113,7 +119,7 @@ export default function Header() {
                   onClick={() => scrollTo("about")}
                   className={linkClass("about")}
                 >
-                  About
+                  Про нас
                 </button>
               </motion.div>
               <motion.div
@@ -124,7 +130,7 @@ export default function Header() {
                   onClick={() => scrollTo("route")}
                   className={linkClass("route")}
                 >
-                  Route
+                  Маршрут
                 </button>
               </motion.div>
               <motion.div
@@ -135,7 +141,7 @@ export default function Header() {
                   onClick={() => scrollTo("gallery")}
                   className={linkClass("gallery")}
                 >
-                  Gallery
+                  Історія
                 </button>
               </motion.div>
               <motion.div
@@ -146,15 +152,26 @@ export default function Header() {
                   onClick={() => scrollTo("support")}
                   className={linkClass("support")}
                 >
-                  Support
+                  Збір
+                </button>
+              </motion.div>
+							<motion.div
+                variants={mobileNavListVariant}
+                {...mobileNavExitProps}
+              >
+                <button
+                  onClick={() => scrollTo("blog")}
+                  className={linkClass("blog")}
+                >
+                  Блог
                 </button>
               </motion.div>
               <motion.div
                 variants={mobileNavListVariant}
                 {...mobileNavExitProps}
               >
-                <button className="px-4 py-2 w-25 bg-white text-black font-medium rounded-full shadow hover:bg-gray-200 transition cursor-pointer">
-                  Donate
+                <button className="px-4 py-2 min-w-25 bg-white text-black font-medium rounded-full shadow hover:bg-gray-200 transition cursor-pointer">
+                  Задонатити
                 </button>
               </motion.div>
             </motion.div>
