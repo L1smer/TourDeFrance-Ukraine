@@ -25,7 +25,7 @@ export default function Gallery() {
         />
         <div className="absolute inset-0 bg-gradient-to-r md:via-black/70 from-black lg:via-black/90 to-transparent" />
         <div className="absolute inset-0 flex flex-col gap-10 2xl:flex-row-reverse justify-center 2xl:justify-between items-center px-6 md:px-10 lg:px-16 overflow-y-auto">
-          <h1 className="m-20 text-3xl md:text-4xl lg:text-5xl font-bold lg:mb-0 self-center 2xl:self-start text-center lg:text-left">
+          <h1 className="mt-10 text-3xl md:text-4xl lg:text-5xl font-bold lg:mb-0 self-center 2xl:self-start text-center lg:text-left">
             {t("gallery.title")}
           </h1>
           <div className="max-w-4xl text-base md:text-lg lg:text-xl font-semibold space-y-6 bg-black/40 p-4 md:p-6 rounded-xl">
