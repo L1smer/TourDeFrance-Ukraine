@@ -66,6 +66,6 @@
   "blog": {
     "title": "Blog de Sergiy",
     "intro": "Sergiy publiera ici ses vidéos et nouvelles",
-    "select_prompt": "Sélectionnez un blog à gauche pour voir le contenu."
+    "select_prompt": "Sélectionnez un blog pour voir le contenu."
   }
 }
