@@ -1,0 +1,66 @@
+{
+  "header": {
+    "about": "About",
+    "route": "Route",
+    "gallery": "History",
+    "support": "Support",
+    "blog": "Blog",
+    "donate": "Donate"
+  },
+  "about": {
+    "title": "We're not just riding the Tour de France — we're doing it for Ukraine.",
+    "description": "The project 'Tour de France by Ukrainians' is a charity cycling marathon aimed at raising funds through UNITED24.",
+    "learnMore": "Learn more"
+  },
+  "learnMore": {
+    "title": "Tour de France by UA 25",
+    "paragraph1": "From July 4 to 26, 2025, a Ukrainian team will undertake a unique cycling marathon — riding the full route of the legendary Tour de France one day ahead of the official stages. The initiative aims to draw attention to Ukraine, unite the Ukrainian and international cycling communities, and raise funds for humanitarian demining through the UNITED24 platform.",
+    "paragraph2": "This is not just a sports event — it is an act of support, solidarity, and resilience."
+  },
+  "today": "Today",
+  "gallery": {
+    "title": "My name is Sergiy Krasnov",
+    "paragraphs": [
+      "I was born and lived for 35 years in Nova Kakhovka, Kherson region. I worked as a city council deputy. On February 24, 2022, my hometown was occupied by russian forces by 9 a.m.",
+      "Later, almost all of the Kherson region fell under occupation — together with my family, friends, and neighbors.",
+      "Some people had to leave their homes, businesses, and lives. Others couldn't leave due to health or other circumstances and are still living in danger, shelling, and fear.",
+      "My life has been connected to cycling for 23 years. I'm a Master of Sports of Ukraine. I decided to use my strength and experience to help those in need. In 2025, I plan to ride the entire Tour de France route — one day ahead of the pros.",
+      "The route consists of 21 stages, 3320 km of distance, and 51,550 m of elevation gain. At 56, it will be my biggest challenge.",
+      "This campaign aims to raise funds through UNITED24 to help Ukrainians affected by war and occupation.",
+      "In 2024, I completed the 'Tour de France Ukraine' by replicating all stages within our country. Now — France: 11 regions, 34 departments, and the Col de la Loze pass (2304 m), the highest point of the 2025 Tour.",
+      "I’ll be accompanied by a support vehicle — with food, water, and mechanical help.",
+      "This campaign supports UNITED24’s humanitarian demining efforts in de-occupied territories."
+    ],
+    "gallery_button": "View gallery",
+    "gallery_labels": {
+      "sergiyAndEquipment": "Equipment before the start",
+      "tourInUkraine": "Tour de France Ukraine 2024, Zhytomyr",
+      "granPriOdessa": "Grand Prix Odessa, 2023",
+      "chersonStage": "Stage in Kherson, 2024",
+      "pressConf": "Press conference in Kryvyi Rih, 2024",
+      "peaceRace": "UCI Race in Kyiv, 2013",
+      "italyRace": "Strada Bianchi race in Italy, 06.03.22"
+    }
+  },
+  "support": {
+    "title": "Join UNITED24 with us",
+    "text": "UNITED24 is the official fundraising platform created by the President of Ukraine to consolidate international support. Our Tour de France by UA 25 project is part of this initiative. Funds will go toward humanitarian aid, demining, and rebuilding regions affected by war.",
+    "cards": {
+      "support_project": {
+        "title": "Support the Project",
+        "text": "Your contribution will help raise funds for Ukrainians affected by war. This is a concrete action that brings victory closer.",
+        "link": "Go to UNITED24"
+      },
+      "support_sergiy": {
+        "title": "Support Sergiy’s Ride",
+        "text": "Help Sergiy Krasnov and his team carry out their charity ride along the Tour de France route. Every donation helps spread Ukraine’s message of resilience.",
+        "link": "Support Sergiy"
+      }
+    }
+  },
+  "blog": {
+    "title": "Sergiy's Blog",
+    "intro": "Sergiy will post his videos and news here",
+    "select_prompt": "Select a blog from the left to view its content."
+  }
+}

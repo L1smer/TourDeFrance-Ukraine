@@ -3,6 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import type { Document } from "@contentful/rich-text-types";
 import { getBlogPosts } from "../data/contentful";
 import type { Entry, EntrySkeletonType } from "contentful";
+import { useTranslation } from "react-i18next";
 
 // Типизация
 type BlogPostFields = {
@@ -17,6 +18,7 @@ type BlogPostSkeleton = EntrySkeletonType<BlogPostFields, "blogPost">;
 export default function Blog() {
   const [posts, setPosts] = useState<Entry<BlogPostSkeleton>[]>([]);
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     getBlogPosts().then(setPosts);
@@ -28,9 +30,9 @@ export default function Blog() {
   return (
     <section className="px-6 py-10 min-h-screen max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
       <div className="md:col-span-1">
-        <h2 className="text-3xl font-bold mb-4">Блог Сергія</h2>
+        <h2 className="text-3xl font-bold mb-4">{t('blog.title')}</h2>
         <p className="text-gray-600 mb-6">
-          Sergiy will post there his videos and news
+          {t('blog.intro')}
         </p>
         <ul className="space-y-2">
           {posts.map((post, index) => {
@@ -81,7 +83,7 @@ export default function Blog() {
           </>
         ) : (
           <p className="text-gray-500">
-            Оберіть блог зліва, щоб переглянути його вміст.
+            {t('blog.select_prompt')}
           </p>
         )}
       </div>

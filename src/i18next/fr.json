@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "about": "À propos",
+    "route": "Itinéraire",
+    "gallery": "Histoire",
+    "support": "Soutien",
+    "blog": "Blog",
+    "donate": "Faire un don"
+  },
+  "about": {
+    "title": "Nous ne faisons pas que participer au Tour de France — nous le faisons pour l'Ukraine.",
+    "description": "Le projet 'Tour de France par les Ukrainiens' est un marathon cycliste caritatif visant à collecter des fonds via UNITED24.",
+    "learnMore": "En savoir plus"
+  },
+  "learnMore": {
+    "title": "Tour de France par UA 25",
+    "paragraph1": "Du 4 au 26 juillet 2025, une équipe ukrainienne entreprendra un marathon cycliste unique — parcourir l'intégralité du Tour de France un jour avant les étapes officielles. L’initiative vise à attirer l’attention sur l’Ukraine, à unir les communautés cyclistes ukrainienne et internationale, et à collecter des fonds pour le déminage humanitaire via la plateforme UNITED24.",
+    "paragraph2": "Ce n’est pas simplement un événement sportif — c’est un acte de soutien, de solidarité et de résilience."
+  },
+  "today": "Aujourd'hui",
+  "gallery": {
+    "title": "Je m'appelle Sergiy Krasnov",
+    "paragraphs": [
+      "Je suis né et j'ai vécu 35 ans à Nova Kakhovka, région de Kherson. J'ai travaillé comme député du conseil municipal. Le 24 février 2022, ma ville natale a été occupée par les forces russes dès 9 heures du matin.",
+      "Plus tard, presque toute la région de Kherson a été occupée — avec ma famille, mes amis et mes voisins.",
+      "Certaines personnes ont dû quitter leur maison, leur entreprise, leur vie. D'autres n'ont pas pu partir et vivent toujours dans la peur et sous les bombardements.",
+      "Ma vie est liée au cyclisme depuis 23 ans. Je suis Maître du Sport d'Ukraine. J'ai décidé d'utiliser ma force et mon expérience pour aider ceux qui en ont besoin. En 2025, je prévois de parcourir tout le parcours du Tour de France — un jour avant les professionnels.",
+      "Le parcours comprend 21 étapes, 3320 km de distance et 51 550 m de dénivelé positif. À 56 ans, ce sera mon plus grand défi.",
+      "Cette initiative vise à collecter des fonds via UNITED24 pour aider les Ukrainiens touchés par la guerre et l’occupation.",
+      "En 2024, j’ai parcouru le 'Tour de France Ukraine' en reproduisant toutes les étapes sur notre territoire. Maintenant — la France : 11 régions, 34 départements, et le col de la Loze (2304 m), le point culminant du Tour 2025.",
+      "Je serai accompagné d’un véhicule d’assistance — avec nourriture, eau et aide technique.",
+      "Cette initiative soutient le déminage humanitaire des territoires libérés par le biais de UNITED24."
+    ],
+    "gallery_button": "Voir la galerie",
+    "gallery_labels": {
+      "sergiyAndEquipment": "Équipement avant le départ",
+      "tourInUkraine": "Tour de France Ukraine 2024, Jytomyr",
+      "granPriOdessa": "Grand Prix Odessa, 2023",
+      "chersonStage": "Étape à Kherson, 2024",
+      "pressConf": "Conférence de presse à Kryvyï Rih, 2024",
+      "peaceRace": "Course UCI à Kyiv, 2013",
+      "italyRace": "Course Strada Bianchi en Italie, 06.03.22"
+    }
+  },
+  "support": {
+    "title": "Rejoignez UNITED24 avec nous",
+    "text": "UNITED24 est la plateforme officielle de collecte de fonds créée par le Président de l'Ukraine pour consolider le soutien international. Notre projet Tour de France by UA 25 en fait partie. Les fonds seront utilisés pour l'aide humanitaire, le déminage et la reconstruction des régions touchées par la guerre.",
+    "cards": {
+      "support_project": {
+        "title": "Soutenir le projet",
+        "text": "Votre contribution aidera à collecter des fonds pour les Ukrainiens touchés par la guerre. Un geste concret qui rapproche la victoire.",
+        "link": "Aller sur UNITED24"
+      },
+      "support_sergiy": {
+        "title": "Soutenir le voyage de Sergiy",
+        "text": "Aidez Sergiy Krasnov et son équipe à réaliser leur tour caritatif sur le parcours du Tour de France. Chaque don contribue à faire connaître l'esprit de résilience ukrainien.",
+        "link": "Soutenir Sergiy"
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog de Sergiy",
+    "intro": "Sergiy publiera ici ses vidéos et nouvelles",
+    "select_prompt": "Sélectionnez un blog à gauche pour voir le contenu."
+  }
+}

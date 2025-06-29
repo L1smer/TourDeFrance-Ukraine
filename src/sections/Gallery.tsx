@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Gallery() {
   const [isViewMode, setIsViewMode] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <section
@@ -23,57 +25,23 @@ export default function Gallery() {
         />
         <div className="absolute inset-0 bg-gradient-to-r md:via-black/70 from-black lg:via-black/90 to-transparent" />
         <div className="absolute inset-0 flex flex-col gap-10 2xl:flex-row-reverse justify-center 2xl:justify-between items-center px-6 md:px-10 lg:px-16 overflow-y-auto">
-          <h1 className="m-5 text-3xl md:text-4xl lg:text-5xl font-bold lg:mb-0 self-center 2xl:self-start text-center lg:text-left">
-            Мене звати Сергій Краснов
+          <h1 className="m-20 text-3xl md:text-4xl lg:text-5xl font-bold lg:mb-0 self-center 2xl:self-start text-center lg:text-left">
+            {t("gallery.title")}
           </h1>
           <div className="max-w-4xl text-base md:text-lg lg:text-xl font-semibold space-y-6 bg-black/40 p-4 md:p-6 rounded-xl">
-            <p>
-              Я народився та прожив 35 років у місті Нова Каховка, Херсонської
-              області. Працював депутатом міської ради. 24 лютого 2022 року моє
-              рідне місто було окуповане російськими військами вже о 9-й ранку.
-              Згодом під окупацією опинилась майже вся Херсонщина — разом із
-              моїми рідними, друзями, сусідами.
-            </p>
-            <p>
-              Частина людей була змушена залишити домівки, бізнеси, життя. Дехто
-              не зміг виїхати — через стан здоров’я або обставини — і досі живе
-              в умовах небезпеки, обстрілів та постійного страху.
-            </p>
-            <p>
-              Вже 23 роки моє життя пов’язане з велосипедним спортом. Я —
-              Майстер спорту України. І я вирішив використати свою силу,
-              витривалість та досвід, щоб допомогти тим, хто цього потребує. У
-              2025 році я планую пройти весь маршрут всесвітньо відомої
-              велогонки Tour de France — за день до основних етапів, які
-              подолають найсильніші велогонщики світу. Це 21 етап, 3320 км
-              горизонтального маршруту та 51 550 м вертикального набору — за 56
-              років це стане моїм найбільшим викликом.
-            </p>
-            <p>
-              Ця акція має на меті зібрати кошти через платформу UNITED24, щоб
-              допомогти українцям, які постраждали від війни та окупації.
-            </p>
-            <p>
-              У 2024 році я вже подолав маршрут "Tour de France Україна",
-              повторивши всі етапи на території нашої держави. Тепер — Франція.
-              11 регіонів, 34 департаменти, перевал Коль-де-ла-Лоз (2304 м) —
-              найвища точка Туру 2025 року.
-            </p>
-            <p>
-              Під час заїзду мене супроводжуватиме автомобіль підтримки — з
-              водою, харчуванням та технічною допомогою.
-            </p>
-            <p>
-              Ця акція має на меті зібрати кошти через платформу UNITED24, щоб
-              зібрати кошти на гуманітарне розмінування деокупованих територій..
-            </p>
+            {(Array.isArray(t("gallery.paragraphs", { returnObjects: true }))
+              ? (t("gallery.paragraphs", { returnObjects: true }) as string[])
+              : []
+            ).map((p: string, idx: number) => (
+              <p key={idx}>{p}</p>
+            ))}
 
             <div className="pt-4 text-center lg:text-left">
               <button
                 onClick={() => setIsViewMode(true)}
                 className="px-6 py-3 md:px-8 md:py-4 bg-yellow-500 text-black rounded-lg text-lg md:text-xl font-semibold shadow-lg hover:bg-yellow-600 transition"
               >
-                Переглянути галерею
+                {t("gallery.gallery_button")}
               </button>
             </div>
           </div>
@@ -94,37 +62,39 @@ export default function Gallery() {
 }
 
 function GalleryImages() {
+  const { t } = useTranslation();
+
   const images = [
     {
       src: "./sergiy-photos/sergiyAndEquipment.jpg",
-      label: "Спорядження перед стартом",
+      label: t("gallery.gallery_labels.sergiyAndEquipment"),
       className: "md:row-span-2",
     },
     {
       src: "./sergiy-photos/tourdefranceINUkraine.jpg",
-      label: "Tour de France Україна",
+      label: t("gallery.gallery_labels.tourInUkraine"),
       className: "md:col-span-2 md:row-span-1",
     },
     {
       src: "./sergiy-photos/gran-priOdessa.png",
-      label: "Гран-прі Одеса",
+      label: t("gallery.gallery_labels.granPriOdessa"),
     },
     {
       src: "./sergiy-photos/tourdefranceCherson.jpg",
-      label: "Етап у Херсоні",
+      label: t("gallery.gallery_labels.chersonStage"),
     },
     {
       src: "./sergiy-photos/tourdefrancepr.jpg",
-      label: "Мій маршрут Tour de France",
+      label: t("gallery.gallery_labels.pressConf"),
       className: "md:col-span-2 md:row-span-2",
     },
     {
       src: "./sergiy-photos/peaceRace.jpg",
-      label: "Peace Race",
+      label: t("gallery.gallery_labels.peaceRace"),
     },
     {
       src: "./sergiy-photos/italy.jpg",
-      label: "Велозмагання в Італії",
+      label: t("gallery.gallery_labels.italyRace"),
     },
   ];
 
@@ -144,13 +114,24 @@ type GalleryImageProps = {
 };
 
 function GalleryImage({ src, label, className = "" }: GalleryImageProps) {
+  const [showLabel, setShowLabel] = useState(false);
+
   return (
     <div
       className={`relative w-full h-full overflow-hidden group ${className} transition-all duration-500 rounded-xl xl:rounded-none`}
+      onClick={() => setShowLabel((prev) => !prev)} // для мобильных устройств
     >
       <img src={src} alt={label} className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 text-white text-sm md:text-base lg:text-lg font-semibold text-center px-4">
+      <div
+        className={`absolute inset-0 bg-black/40 transition-opacity duration-300 z-10 ${
+          showLabel ? "opacity-100" : "group-hover:opacity-100 opacity-0"
+        }`}
+      />
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 z-20 text-white text-sm md:text-base lg:text-lg font-semibold text-center px-4 ${
+          showLabel ? "opacity-100" : "group-hover:opacity-100 opacity-0"
+        }`}
+      >
         {label}
       </div>
     </div>

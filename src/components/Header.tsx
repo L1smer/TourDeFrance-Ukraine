@@ -6,6 +6,7 @@ import {
   mobileNavListVariant,
   mobileNavExitProps,
 } from "../data/animationConfig";
+import { useTranslation } from 'react-i18next';
 
 const scrollTo = (id: string) => {
   document
@@ -16,6 +17,7 @@ const scrollTo = (id: string) => {
 export default function Header() {
   const [activeSection, setActiveSection] = useState<string>("about");
   const [isOpen, setIsOpen] = useState<boolean>(false);
+	const { t } = useTranslation();
 
   useEffect(() => {
     const sections = ["about", "route", "gallery", "support", "blog"];
@@ -66,34 +68,34 @@ export default function Header() {
             onClick={() => scrollTo("about")}
             className={linkClass("about")}
           >
-            Про нас
+            {t('header.about')}
           </button>
           <button
             onClick={() => scrollTo("route")}
             className={linkClass("route")}
           >
-            Маршрут
+            {t('header.route')}
           </button>
           <button
             onClick={() => scrollTo("gallery")}
             className={linkClass("gallery")}
           >
-            Історія
+            {t('header.gallery')}
           </button>
           <button
             onClick={() => scrollTo("support")}
             className={linkClass("support")}
           >
-            Збір
+            {t('header.support')}
           </button>
 					<button
             onClick={() => scrollTo("blog")}
             className={linkClass("blog")}
           >
-            Блог
+            {t('header.blog')}
           </button>
           <button className="ml-4 px-4 py-2 bg-white text-black font-medium rounded-full shadow hover:bg-gray-200 transition cursor-pointer">
-            Задонатити
+            {t('header.donate')}
           </button>
         </div>
         <div className="flex w-[75px] justify-end lg:hidden">
@@ -119,7 +121,7 @@ export default function Header() {
                   onClick={() => scrollTo("about")}
                   className={linkClass("about")}
                 >
-                  Про нас
+                  {t('header.about')}
                 </button>
               </motion.div>
               <motion.div
@@ -130,7 +132,7 @@ export default function Header() {
                   onClick={() => scrollTo("route")}
                   className={linkClass("route")}
                 >
-                  Маршрут
+                  {t('header.route')}
                 </button>
               </motion.div>
               <motion.div
@@ -141,7 +143,7 @@ export default function Header() {
                   onClick={() => scrollTo("gallery")}
                   className={linkClass("gallery")}
                 >
-                  Історія
+                  {t('header.gallery')}
                 </button>
               </motion.div>
               <motion.div
@@ -152,7 +154,7 @@ export default function Header() {
                   onClick={() => scrollTo("support")}
                   className={linkClass("support")}
                 >
-                  Збір
+                  {t('header.support')}
                 </button>
               </motion.div>
 							<motion.div
@@ -163,7 +165,7 @@ export default function Header() {
                   onClick={() => scrollTo("blog")}
                   className={linkClass("blog")}
                 >
-                  Блог
+                  {t('header.blog')}
                 </button>
               </motion.div>
               <motion.div
@@ -171,7 +173,7 @@ export default function Header() {
                 {...mobileNavExitProps}
               >
                 <button className="px-4 py-2 min-w-25 bg-white text-black font-medium rounded-full shadow hover:bg-gray-200 transition cursor-pointer">
-                  Задонатити
+                  {t('header.donate')}
                 </button>
               </motion.div>
             </motion.div>
