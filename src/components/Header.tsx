@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   mobileNavContainerVariant,
   mobileNavListVariant,
   mobileNavExitProps,
 } from "../data/animationConfig";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import i18n from "../i18next";
 
 const scrollTo = (id: string) => {
   document
@@ -17,7 +19,7 @@ const scrollTo = (id: string) => {
 export default function Header() {
   const [activeSection, setActiveSection] = useState<string>("about");
   const [isOpen, setIsOpen] = useState<boolean>(false);
-	const { t } = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const sections = ["about", "route", "gallery", "support", "blog"];
@@ -47,17 +49,19 @@ export default function Header() {
     `transition ${
       activeSection === id
         ? "text-yellow-500 font-bold"
-        : (activeSection === "route" || activeSection === "blog")
+        : activeSection === "route" || activeSection === "blog"
         ? "text-black"
         : "text-white"
     } hover:text-yellow-500 cursor-pointer`;
 
   return (
-    <header className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-md text-white px-4 py-3 rounded-xl w-[95vw] max-w-[960px] z-50 shadow-lg">
+    <header className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-md text-white px-4 py-3 rounded-xl w-[95vw] max-w-[1024px] z-50 shadow-lg">
       <nav className="flex items-center justify-between flex-wrap">
         <div
           className={`${
-            (activeSection === "route" || activeSection === "blog") ? "text-sky-600" : "text-white"
+            activeSection === "route" || activeSection === "blog"
+              ? "text-sky-600"
+              : "text-white"
           } font-bold text-md sm:text-lg italic`}
         >
           Tour de France <span className="text-yellow-400">by UA 25</span>
@@ -68,35 +72,35 @@ export default function Header() {
             onClick={() => scrollTo("about")}
             className={linkClass("about")}
           >
-            {t('header.about')}
+            {t("header.about")}
           </button>
           <button
             onClick={() => scrollTo("route")}
             className={linkClass("route")}
           >
-            {t('header.route')}
+            {t("header.route")}
           </button>
           <button
             onClick={() => scrollTo("gallery")}
             className={linkClass("gallery")}
           >
-            {t('header.gallery')}
+            {t("header.gallery")}
           </button>
           <button
             onClick={() => scrollTo("support")}
             className={linkClass("support")}
           >
-            {t('header.support')}
+            {t("header.support")}
           </button>
-					<button
+          <button
             onClick={() => scrollTo("blog")}
             className={linkClass("blog")}
           >
-            {t('header.blog')}
+            {t("header.blog")}
           </button>
-          <button className="ml-4 px-4 py-2 bg-white text-black font-medium rounded-full shadow hover:bg-gray-200 transition cursor-pointer">
-            {t('header.donate')}
-          </button>
+          <div className="items-center space-x-2 px-2 py-1">
+            <LanguageDropdown />
+          </div>
         </div>
         <div className="flex w-[75px] justify-end lg:hidden">
           <button onClick={() => setIsOpen((prev) => !prev)}>
@@ -121,7 +125,7 @@ export default function Header() {
                   onClick={() => scrollTo("about")}
                   className={linkClass("about")}
                 >
-                  {t('header.about')}
+                  {t("header.about")}
                 </button>
               </motion.div>
               <motion.div
@@ -132,7 +136,7 @@ export default function Header() {
                   onClick={() => scrollTo("route")}
                   className={linkClass("route")}
                 >
-                  {t('header.route')}
+                  {t("header.route")}
                 </button>
               </motion.div>
               <motion.div
@@ -143,7 +147,7 @@ export default function Header() {
                   onClick={() => scrollTo("gallery")}
                   className={linkClass("gallery")}
                 >
-                  {t('header.gallery')}
+                  {t("header.gallery")}
                 </button>
               </motion.div>
               <motion.div
@@ -154,10 +158,10 @@ export default function Header() {
                   onClick={() => scrollTo("support")}
                   className={linkClass("support")}
                 >
-                  {t('header.support')}
+                  {t("header.support")}
                 </button>
               </motion.div>
-							<motion.div
+              <motion.div
                 variants={mobileNavListVariant}
                 {...mobileNavExitProps}
               >
@@ -165,21 +169,67 @@ export default function Header() {
                   onClick={() => scrollTo("blog")}
                   className={linkClass("blog")}
                 >
-                  {t('header.blog')}
+                  {t("header.blog")}
                 </button>
               </motion.div>
+
               <motion.div
                 variants={mobileNavListVariant}
                 {...mobileNavExitProps}
               >
-                <button className="px-4 py-2 min-w-25 bg-white text-black font-medium rounded-full shadow hover:bg-gray-200 transition cursor-pointer">
-                  {t('header.donate')}
-                </button>
+                <LanguageDropdown />
               </motion.div>
             </motion.div>
           </AnimatePresence>
         )}
       </nav>
     </header>
+  );
+}
+
+function LanguageDropdown() {
+  const { i18n } = useTranslation();
+  const [open, setOpen] = useState(false);
+  const currentLang = i18n.language;
+
+  const languages = [
+    { code: "ua", label: "UA" },
+    { code: "en", label: "EN" },
+    { code: "fr", label: "FR" },
+  ];
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setOpen(false);
+  };
+
+  return (
+    <div className="relative inline-block text-left">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-1 px-3 py-1 bg-white/30 hover:bg-white/40 backdrop-blur-sm rounded-full text-sm font-bold uppercase text-black transition"
+      >
+        {languages.find((l) => l.code === currentLang)?.label || "UA"}
+        <ChevronDown size={16} />
+      </button>
+
+      {open && (
+        <div className="absolute right-0 mt-2 w-20 bg-white rounded-md shadow-lg ring-1 ring-black/10 z-50">
+          <ul className="py-1">
+            {languages.map((lang) => (
+              <li
+                key={lang.code}
+                onClick={() => changeLanguage(lang.code)}
+                className={`block px-3 py-1 text-sm text-black text-center cursor-pointer hover:bg-yellow-100 ${
+                  lang.code === currentLang ? "font-bold text-yellow-600" : ""
+                }`}
+              >
+                {lang.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 }
