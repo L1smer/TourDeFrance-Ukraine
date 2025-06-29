@@ -17,7 +17,12 @@
     "paragraph1": "Du 4 au 26 juillet 2025, une équipe ukrainienne entreprendra un marathon cycliste unique — parcourir l'intégralité du Tour de France un jour avant les étapes officielles. L’initiative vise à attirer l’attention sur l’Ukraine, à unir les communautés cyclistes ukrainienne et internationale, et à collecter des fonds pour le déminage humanitaire via la plateforme UNITED24.",
     "paragraph2": "Ce n’est pas simplement un événement sportif — c’est un acte de soutien, de solidarité et de résilience."
   },
-  "today": "Aujourd'hui",
+  "route": {
+		"today": "Aujourd'hui",
+		"title": "Itinéraire Tour de France 2025",
+		"showMore": "Afficher plus",
+		"showLess": "Afficher moins"
+	},
   "gallery": {
     "title": "Je m'appelle Sergiy Krasnov",
     "paragraphs": [
@@ -47,9 +52,9 @@
     "text": "UNITED24 est la plateforme officielle de collecte de fonds créée par le Président de l'Ukraine pour consolider le soutien international. Notre projet Tour de France by UA 25 en fait partie. Les fonds seront utilisés pour l'aide humanitaire, le déminage et la reconstruction des régions touchées par la guerre.",
     "cards": {
       "support_project": {
-        "title": "Soutenir le projet",
+        "title": "Faire un don à une collecte de fonds",
         "text": "Votre contribution aidera à collecter des fonds pour les Ukrainiens touchés par la guerre. Un geste concret qui rapproche la victoire.",
-        "link": "Aller sur UNITED24"
+        "link": "faire un don"
       },
       "support_sergiy": {
         "title": "Soutenir le voyage de Sergiy",

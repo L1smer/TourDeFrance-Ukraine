@@ -31,9 +31,8 @@ export default function Support() {
               </p>
             </div>
             <a
-              href=""
+              href="https://u24.gov.ua/"
               target="_blank"
-              rel="noopener noreferrer"
               className="inline-block w-fit bg-yellow-400 text-black px-5 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition"
             >
               {t('support.cards.support_project.link')}
@@ -49,9 +48,8 @@ export default function Support() {
               </p>
             </div>
             <a
-              href=""
+              href="https://send.monobank.ua/jar/4WkKTexUhB"
               target="_blank"
-              rel="noopener noreferrer"
               className="inline-block w-fit bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
             >
               {t('support.cards.support_sergiy.link')}

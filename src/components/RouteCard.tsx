@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 export interface RouteCardStageProps {
   stage: number;
   date: string;
@@ -20,6 +22,8 @@ function isRestDay(route: any): route is RouteCardRestStageProps {
 }
 
 export default function RouteCard({ route }: RouteCardProps) {
+  const { t } = useTranslation();
+
   function isToday(date: string) {
     const today: string = new Date().toISOString().split("T")[0];
     return date === today;
@@ -43,13 +47,11 @@ export default function RouteCard({ route }: RouteCardProps) {
         Stage {route.stage}
         {isToday(route.date) && (
           <span className="ml-2 px-2 py-1 text-xs rounded-full bg-green-100 text-green-800 font-semibold">
-            📍 Сьогодні
+            📍 {t("route.today")}
           </span>
         )}
       </h3>
-      <p className="text-sm text-blue-600">
-        {route.date}
-      </p>
+      <p className="text-sm text-blue-600">{route.date}</p>
       <p className="text-md mt-2 font-medium">
         {route.start} → {route.finish}
       </p>
