@@ -61,51 +61,53 @@ export default function Header() {
             activeSection === "route" || activeSection === "blog"
               ? "text-sky-600"
               : "text-white"
-          } font-bold text-md sm:text-lg italic`}
+          } font-bold text-sm sm:text-lg italic`}
         >
           Tour de France <span className="text-yellow-400">by UA 25</span>
         </div>
-
-        <div className="lg:flex items-center space-x-8 hidden">
-          <button
-            onClick={() => scrollTo("about")}
-            className={linkClass("about")}
-          >
-            {t("header.about")}
-          </button>
-          <button
-            onClick={() => scrollTo("route")}
-            className={linkClass("route")}
-          >
-            {t("header.route")}
-          </button>
-          <button
-            onClick={() => scrollTo("gallery")}
-            className={linkClass("gallery")}
-          >
-            {t("header.gallery")}
-          </button>
-          <button
-            onClick={() => scrollTo("support")}
-            className={linkClass("support")}
-          >
-            {t("header.support")}
-          </button>
-          <button
-            onClick={() => scrollTo("blog")}
-            className={linkClass("blog")}
-          >
-            {t("header.blog")}
-          </button>
+        <div className="flex gap-5">
+          <div className="lg:flex items-center space-x-8 hidden">
+            <button
+              onClick={() => scrollTo("about")}
+              className={linkClass("about")}
+            >
+              {t("header.about")}
+            </button>
+            <button
+              onClick={() => scrollTo("route")}
+              className={linkClass("route")}
+            >
+              {t("header.route")}
+            </button>
+            <button
+              onClick={() => scrollTo("gallery")}
+              className={linkClass("gallery")}
+            >
+              {t("header.gallery")}
+            </button>
+            <button
+              onClick={() => scrollTo("support")}
+              className={linkClass("support")}
+            >
+              {t("header.support")}
+            </button>
+            <button
+              onClick={() => scrollTo("blog")}
+              className={linkClass("blog")}
+            >
+              {t("header.blog")}
+            </button>
+          </div>
           <div className="items-center space-x-2 px-2 py-1">
             <LanguageDropdown />
           </div>
+          <div className="flex w-[5px] justify-end lg:hidden">
+            <button onClick={() => setIsOpen((prev) => !prev)}>
+              {isOpen ? <X color="black" /> : <Menu color="black" />}
+            </button>
+          </div>
         </div>
-        <div className="flex w-[75px] justify-end lg:hidden">
-          <button onClick={() => setIsOpen((prev) => !prev)}>
-            {isOpen ? <X color="black" /> : <Menu color="black" />}
-          </button>
-        </div>
+
         {isOpen && (
           <AnimatePresence mode="wait">
             <motion.div
@@ -170,13 +172,6 @@ export default function Header() {
                 >
                   {t("header.blog")}
                 </button>
-              </motion.div>
-
-              <motion.div
-                variants={mobileNavListVariant}
-                {...mobileNavExitProps}
-              >
-                <LanguageDropdown />
               </motion.div>
             </motion.div>
           </AnimatePresence>
