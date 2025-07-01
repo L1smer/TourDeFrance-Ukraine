@@ -11,7 +11,7 @@ export default function Gallery() {
         isViewMode
           ? "bg-gradient-to-b from-yellow-400 to-blue-600 min-h-700 xl:min-h-screen"
           : "2xl:min-h-screen sm:min-h-300 min-h-530"
-      } bg-black text-white`}
+      } text-white`}
     >
       <div
         className={`absolute inset-0 z-20 transition-opacity duration-1000 ease-in-out ${
@@ -119,7 +119,7 @@ function GalleryImage({ src, label, className = "" }: GalleryImageProps) {
   return (
     <div
       className={`relative w-full h-full overflow-hidden group ${className} transition-all duration-500 rounded-xl xl:rounded-none`}
-      onClick={() => setShowLabel((prev) => !prev)} // для мобильных устройств
+      onClick={() => setShowLabel((prev) => !prev)}
     >
       <img src={src} alt={label} className="w-full h-full object-cover" />
       <div

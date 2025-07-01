@@ -58,7 +58,7 @@ export default function Header() {
       <nav className="flex items-center justify-between flex-wrap">
         <div
           className={`${
-            activeSection === "route" || activeSection === "blog"
+            activeSection === "route" || activeSection === "blog" || activeSection === "gallery"
               ? "text-sky-600"
               : "text-white"
           } font-bold text-sm sm:text-lg italic`}
