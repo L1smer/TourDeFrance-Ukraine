@@ -31,7 +31,7 @@ export default function Support() {
               </p>
             </div>
             <a
-              href="https://u24.gov.ua/"
+              href="https://donorbox.org/united24-riding-for-ukraine?preview=1751375069"
               target="_blank"
               className="inline-block w-fit bg-yellow-400 text-black px-5 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition"
             >

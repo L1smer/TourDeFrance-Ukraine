@@ -188,6 +188,7 @@ function LanguageDropdown() {
 
   const languages = [
     { code: "ua", label: "UA" },
+		{ code: "ru", label: "RU" },
     { code: "en", label: "EN" },
     { code: "fr", label: "FR" },
   ];
