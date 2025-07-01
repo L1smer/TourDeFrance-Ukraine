@@ -10,7 +10,7 @@ export default function Gallery() {
       className={`relative w-full overflow-y-hidden${
         isViewMode
           ? "bg-gradient-to-b from-yellow-400 to-blue-600 min-h-700 xl:min-h-screen"
-          : "2xl:min-h-screen sm:min-h-300 min-h-530"
+          : "2xl:min-h-screen sm:min-h-300 min-h-530 bg-black"
       } text-white`}
     >
       <div
