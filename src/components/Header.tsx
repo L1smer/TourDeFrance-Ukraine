@@ -203,7 +203,7 @@ function LanguageDropdown() {
         onClick={() => setOpen(!open)}
         className="flex items-center gap-1 px-3 py-1 bg-white/30 hover:bg-white/40 backdrop-blur-sm rounded-full text-sm font-bold uppercase text-black transition"
       >
-        {languages.find((l) => l.code === currentLang)?.label || "UA"}
+        {languages.find((l) => l.code === currentLang)?.label}
         <ChevronDown size={16} />
       </button>
 
