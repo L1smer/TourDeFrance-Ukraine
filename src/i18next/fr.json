@@ -18,11 +18,11 @@
     "paragraph2": "Ce n’est pas simplement un événement sportif — c’est un acte de soutien, de solidarité et de résilience."
   },
   "route": {
-		"today": "Aujourd'hui",
-		"title": "Itinéraire Tour de France 2025",
-		"showMore": "Afficher plus",
-		"showLess": "Afficher moins"
-	},
+    "today": "Aujourd'hui",
+    "title": "Itinéraire Tour de France 2025",
+    "showMore": "Afficher plus",
+    "showLess": "Afficher moins"
+  },
   "gallery": {
     "title": "Je m'appelle Sergiy Krasnov",
     "paragraphs": [
@@ -49,11 +49,11 @@
   },
   "support": {
     "title": "Rejoignez UNITED24 avec nous",
-    "text": "UNITED24 est la plateforme officielle de collecte de fonds créée par le Président de l'Ukraine pour consolider le soutien international. Notre projet Tour de France by UA 25 en fait partie. Les fonds seront utilisés pour l'aide humanitaire, le déminage et la reconstruction des régions touchées par la guerre.",
+    "text": "UNITED24 est la plateforme officielle de collecte de fonds créée par le Président ukrainien pour consolider le soutien international. Notre projet « Tour de France by UA 25 » en fait partie. Les fonds seront utilisés pour le déminage dans les régions touchées par la guerre.",
     "cards": {
       "support_project": {
         "title": "Faire un don à une collecte de fonds",
-        "text": "Votre contribution aidera à collecter des fonds pour les Ukrainiens touchés par la guerre. Un geste concret qui rapproche la victoire.",
+        "text": "Votre contribution aidera à collecter des fonds pour le déminage, contribuer à faire de l’Ukraine un endroit plus sûr.",
         "link": "faire un don"
       },
       "support_sergiy": {
