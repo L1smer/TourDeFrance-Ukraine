@@ -53,7 +53,7 @@ export default function Gallery() {
           isViewMode ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex flex-col flex-1 gap-5 xl:grid xl:gap-0 xl:grid-cols-4 xl:auto-rows-fr max-w-[80vw] m-auto xl:max-w-full h-full">
+        <div className="flex flex-col flex-1 xl:grid xl:grid-cols-4 xl:auto-rows-fr w-full m-auto xl:max-w-full h-full">
           <GalleryImages />
         </div>
       </div>
@@ -118,7 +118,7 @@ function GalleryImage({ src, label, className = "" }: GalleryImageProps) {
 
   return (
     <div
-      className={`relative w-full h-full overflow-hidden group ${className} transition-all duration-500 rounded-xl xl:rounded-none`}
+      className={`relative w-full h-full overflow-hidden group ${className} transition-all duration-500`}
       onClick={() => setShowLabel((prev) => !prev)}
     >
       <img src={src} alt={label} className="w-full h-full object-cover" />
