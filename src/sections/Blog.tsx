@@ -33,7 +33,7 @@ export default function Blog() {
         <p className="text-gray-600 mb-6">
           {t('blog.intro')}
         </p>
-        <ul className="space-y-2">
+        <ul className="space-y-2 h-[600px] overflow-y-scroll">
           {posts.map((post, index) => {
             const { title, publishDate } = post.fields as BlogPostFields;
             const isActive = index === activeIndex;
