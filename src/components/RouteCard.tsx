@@ -31,10 +31,15 @@ export default function RouteCard({ route }: RouteCardProps) {
 
   if (isRestDay(route)) {
     return (
-      <div className="rounded-2xl shadow-md border border-yellow-200 bg-yellow-50 p-5 text-center">
+      <div className="rounded-2xl shadow-md border flex flex-col justify-center items-center border-yellow-200 bg-yellow-50 p-5 text-center">
         <h3 className="text-xl font-bold text-yellow-700 mb-2">
-          Rest Day {route.rest_day}
+          Rest Day {route.rest_day}{" "}
         </h3>
+        {isToday(route.date) && (
+          <span className="mb-2 px-2 py-1 text-xs max-w-30 rounded-full bg-green-100 text-green-800 font-semibold">
+            📍 {t("route.today")}
+          </span>
+        )}
         <p className="text-sm text-yellow-600">{route.date}</p>
         <p className="text-md font-medium mt-2">{route.location}</p>
       </div>
