@@ -13,6 +13,7 @@ export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
       <motion.img
         src="./united24.png"
         alt="Tour de France UA"
+				loading="lazy"
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -39,6 +40,7 @@ export default function LearnMoreAbout({ onLearnMore }: LearnMoreAboutProps) {
       <motion.img
         src="./logo.png"
         alt="Tour de France UA"
+				loading="lazy"
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
